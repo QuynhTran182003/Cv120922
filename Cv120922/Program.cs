@@ -1,4 +1,4 @@
-﻿namespace Cv120922
+﻿ namespace Cv120922
 {
     class Program
     {
@@ -10,6 +10,9 @@
             Console.WriteLine(i.ToString());
             Console.WriteLine(i2.ToString());
             Console.WriteLine("Intersection: " + Interval.intersection(i, i2));
+
+            Triangle t = new Triangle(9,9,9);
+            Console.WriteLine(t.ToString());
         }
     }
-}
+} 

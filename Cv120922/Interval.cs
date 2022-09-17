@@ -46,13 +46,23 @@ namespace Cv120922
             get { return low; }
             set 
             {
-                if (value < low)
+                if (value >= high)
                 {
                     throw new Exception("Low value must not be larger or equal to high value.");
                 }
+                low = value;
             }
         }
-        public int High { get; set; }
+        public int High { 
+            get { return high; }
+            set { 
+                if(value < low)
+                {
+                    throw new Exception("High value must not be smaller than low value");
+                }
+                high = value; 
+            }
+        }
 
         //display
         public override string ToString()
